@@ -137,15 +137,202 @@
 // console.log(inRing,onSide)
 
 //DESTURCTURING FUNCTIONS
-function convertCurrency(amount){
-    const converted= {
-        USD: amount*0.76,
-        GPB:amount*0.53,
-        AUD:amount*1.01,
-        MEX:amount*13.30
-    };
-    return converted
-}
+// function convertCurrency(amount){
+//     const converted= {
+//         USD: amount*0.76,
+//         GPB:amount*0.53,
+//         AUD:amount*1.01,
+//         MEX:amount*13.30
+//     };
+//     return converted
+// }
  
-const {USD, AUD, MEX,GPB} = convertCurrency(100)
-console.log(USD,GPB,AUD,MEX) 
+// const {USD, AUD, MEX,GPB} = convertCurrency(100)
+// console.log(USD,GPB,AUD,MEX) 
+
+// function tipCalc ({total=100, tip=0.15, tax=0.13} = {})
+// {
+//     return total + (tip*total)+(tax*total);
+   
+// }
+// const bill= tipCalc()
+// console.log(bill)
+
+// FOR OF LOOP
+//const cuts =["chuck", "brisket", "shank","short rib"];
+
+// for (const [i, cut] of cuts.entries()) {
+//     console.log(`${cut} is the ${i+1} item`)
+    
+// }
+
+// function addUpNumbers(){
+//     let total= 0
+//     for ( const num of arguments) {
+//         total += num;
+//     }
+//     console.log(total);
+//     return total;
+// }
+
+// addUpNumbers(10,23,45,67,89,56,123)
+
+// THE FOR LOOPS
+// for loop
+// const cuts =["chuck", "brisket", "shank","short rib"];
+// for(let i=0; i<cuts.length; i++){
+//     console.log(cuts[i])
+// }
+
+// foreach loop
+// const cuts =["chuck", "brisket", "shank","short rib"];
+// cuts.forEach((cut)=>{
+//     consol.log(cut);
+//     if (cut === "brisket"){
+//     continue;
+//     }
+// })
+ 
+//forin loop
+// const cuts =["chuck", "brisket", "shank","short rib"];
+// for(const index in cuts){
+//     console.log(cuts[index]);
+// }
+
+//forof loop
+// const cuts =["chuck", "brisket", "shank","short rib"];
+// for(const cut of cuts){
+//     if(cut === "brisket"){
+//      //break/ continue ;
+//     }
+//     console.log(cut)
+// }
+
+// USING FOR IN WITH OBJECTS
+// const apple={
+//     colour: " red >",
+//     size: " medium >",
+//     weight:" 50g >",
+//     sugar: " 10 >"
+// }
+
+// for(const prop in apple){
+//     const value= apple[prop];
+//     console.log(value, prop)
+// }
+
+//ARRAY.FROM() AND ARRAY.OF()
+// too stressful watch the video again until you know it 
+//or check it in "THE FOLDER"
+
+// SPREAD OPERATOR
+
+// const featured = ["Deep dish", "Peperoni","Hawaiian"];
+// const speciality = ["Meatzza", "Spicy Mama", "Margherita"];
+
+// const pizzas = [...featured, "veg", ...speciality]
+
+// const fridayPizzas =[...pizzas];
+
+// const deepDish = {
+//     pizzaName :"Deep Dish",
+//     size: "Medium",
+//     ingredients: ["Marinara", "Italian Sausage", "Dough", "Cheese"]
+// };
+
+//SPREADING INTO A FUNCTION
+// const inventors= ["Einstein","Tesla","Galileo"]
+// const newInventors =["Musk", "Jobs"]
+// inventors.push(...newInventors)
+// console.log(inventors)
+
+// const name =["kolade", "akande"]
+
+// function sayHi(first, last){
+//     alert(`Hi there ${first} ${last}`)
+// };
+ 
+// sayHi(...name)
+
+//THE ...REST PARAM IN FUNCTIONS AND DESTRUCTURING
+// function convertCurrency(rate,...amounts){
+//     return amounts.map(amount => amount*rate);
+
+// }
+// const amounts=convertCurrency(1.54,10,23,52,1,56)
+// console.log(amounts)
+
+// const runner =["kolade", 123, 5.5, 5, 6, 35]
+// const [name,id, ...runs]=runner;
+// console.log(name, id, runs);
+
+// const team =["wes","kait","lux","sheena","kelly"];
+// const [captain,assistant,...players]=team;
+// console.log(captain,assistant,players)
+
+//OBJECT LITERAL UPGRADES
+// const first ="snickers";
+// const last = " bos ";
+// const age = 2;
+// const breed = "caucasian"
+// const dog = {
+//     first,
+//     last,
+//     age,
+//     breed,
+//     pals:["hudo"," jibola"]
+// };
+// console.log(dog)
+
+// //instead of this
+// const modal ={
+//     create: function (){
+
+//     },
+//     open: function (){
+
+//     },
+//     close: function (){
+
+//     },
+// }
+
+// // do this
+// const modal ={
+//     create(selector){
+
+//     },
+//     open(content){
+
+//     },
+//     close(goodbye){
+
+//     },
+// };
+
+
+/////////////////////
+function invertColor(color) {
+    return '#' + ("000000" + (0xFFFFFF ^ parseInt(color.substring(1),16)).toString(16)).slice(-6);
+}
+
+const key = 'pocketColor';
+const value = '#ffc600';
+
+const tShirt = {
+  [key]: value,
+  [`${key}Opposite`]: invertColor(value)
+};
+
+console.log(tShirt)
+
+
+const keys = ['size', 'color', 'weight'];
+const values = ['medium', 'red', 100];
+
+const shirt = {
+  [keys.shift()]: values.shift(),
+  [keys.shift()]: values.shift(),
+  [keys.shift()]: values.shift(),
+}
+console.log(shirt);

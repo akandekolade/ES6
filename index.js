@@ -312,27 +312,267 @@
 
 
 /////////////////////
-function invertColor(color) {
-    return '#' + ("000000" + (0xFFFFFF ^ parseInt(color.substring(1),16)).toString(16)).slice(-6);
-}
+// function invertColor(color) {
+//     return '#' + ("000000" + (0xFFFFFF ^ parseInt(color.substring(1),16)).toString(16)).slice(-6);
+// }
 
-const key = 'pocketColor';
-const value = '#ffc600';
+// const key = 'pocketColor';
+// const value = '#ffc600';
 
-const tShirt = {
-  [key]: value,
-  [`${key}Opposite`]: invertColor(value)
-};
+// const tShirt = {
+//   [key]: value,
+//   [`${key}Opposite`]: invertColor(value)
+// };
 
-console.log(tShirt)
+// console.log(tShirt)
 
 
-const keys = ['size', 'color', 'weight'];
-const values = ['medium', 'red', 100];
+// const keys = ['size', 'color', 'weight'];
+// const values = ['medium', 'red', 100];
 
-const shirt = {
-  [keys.shift()]: values.shift(),
-  [keys.shift()]: values.shift(),
-  [keys.shift()]: values.shift(),
-}
-console.log(shirt);
+// const shirt = {
+//   [keys.shift()]: values.shift(),
+//   [keys.shift()]: values.shift(),
+//   [keys.shift()]: values.shift(),
+// }
+// console.log(shirt);
+
+//PROMISES WATCH THE VIDEO
+
+//BUILDING YOUR OWN PROMISES
+// const p =new Promise((resolve, reject)=> {
+//   setTimeout(()=>{
+//   reject("kolade isn\'t cool");
+//   }, 1000)
+// });
+// p
+//  .then(data=>{
+//    console.log(data)
+//  })
+//  .catch(err=> {
+//    console.error(err)
+//  })
+
+//CHAINING PROMISES
+// watch video
+
+//WORKING WITH MULTIPLE PROMISES
+
+// const weather = new Promise((resolve) => {
+//       setTimeout(() => {
+//         resolve({ temp: 29, conditions: 'Sunny with Clouds'});
+//       }, 2000);
+//     });
+  
+//     const tweets = new Promise((resolve) => {
+//       setTimeout(() => {
+//         resolve(['I like cake', 'BBQ is good too!']);
+//       }, 500);
+//     });
+  
+//     Promise
+//       .all([weather, tweets])
+//       .then(responses => {
+//         const [weatherInfo, tweetInfo] = responses;
+//         console.log(weatherInfo, tweetInfo)
+//       });
+  
+//       const postsPromise = fetch('http://wesbos.com/wp-json/wp/v2/posts');
+//       const streetCarsPromise = fetch('http://data.ratp.fr/api/datasets/1.0/search/?q=paris');
+    
+//       Promise
+//         .all([postsPromise, streetCarsPromise])
+//         .then(responses => {
+//           return Promise.all(responses.map(res => res.json()))
+//         })
+//         .then(responses => {
+//           console.log(responses);
+//         });
+
+//SYMBOLS
+// const kolade =Symbol("kolade");
+// const person=Symbol("kolade");
+
+// const classroom ={
+//    [Symbol("Mark")]:{grade: 50, gender: "male"},
+//    [Symbol("olivia")]: {grade: 80, gender: "female"},
+//    [Symbol("olivia")]: {grade: 80, gender: "female"},
+// }
+// // it doesn't work
+// for(person in classroom){
+//     console.log(person)
+// };
+// const syms =Object.getOwnPropertySymbols(classroom);
+// const data =syms.map(syn=> classroom[syn]);
+// console.log(data);
+
+//PROTOTYPAL INHERITANCE REVIEW
+// function Dog(name, breed) {
+//     this.name = name;
+//     this.breed = breed;
+//   }
+
+//   Dog.prototype.bark = function() {
+//     console.log(`Bark Bark! My name is ${this.name}`);
+//   };
+
+//   Dog.prototype.cuddle = function() {
+//     console.log(`I love you owner!`);
+//   };
+
+//   const snickers = new Dog('Snickers', 'King Charles');
+//   const sunny = new Dog('Sunny', 'Golden Doodle');
+
+//CLASSES
+// class Dog{
+//     constructor(name, breed){
+//         this.name = name;
+//         this.breed = breed;
+//     }
+//     bark() {
+//         console.log(`Bark Bark! My name is ${this.name}`)
+//     }
+//     cuddle() {
+//         console.log(`I love you owner!`);
+//     }
+//     static info() {
+//         console.log("A dog is better than a cat by 10 times");
+    
+//     }
+//     get description() {
+//         return `${this.name} is a ${this.breed} type of dog`;
+//     }
+//     set nicknames(value) {
+//         this.nick = value.trim();
+//     }
+//     get nicknames() {
+//         return this.nick.toUpperCase();
+//     }
+// }
+
+//   const snickers = new Dog('Snickers', 'King Charles');
+//   const sunny = new Dog('Sunny', 'Golden Doodle');
+
+
+//EXTENDING CLASSES AND USING SUPER()
+// class Animal {
+//     constructor(name){
+//         this.name = name;
+//         this.thirst = 100;
+//         this.belly = [];
+//     }
+//     drink() {
+//         this.thirst -=10;
+//         return this.thirst;
+//     }
+//     eat(food) {
+//         this.belly.push(food);
+//         return this.belly;
+//     }
+// }
+
+// class Dog extends Animal {
+//     constructor(name, breed){
+//         super(name);
+//         this.breed= breed;
+//     }
+// }
+
+// const rhino = new Animal("Rhiny")
+// const snickers = new Dog("snickers","King charles")
+
+//EXTENDING ARRAYS WITH CLASSES FOR CUSTOM COLLECTIONS
+// class MovieCollection extends Array{
+//     constructor(name, ...items) {
+//         super(...items);
+//         this.name = name;
+//     }
+//     add(movie){
+//         this.push(movie)
+//     }
+//     topRated(limit =10){
+//         return this.sort((a,b) => (a.stars > b.stars ? -1 : 1)).slice(0, limit);
+//     }
+// }
+// const movies = new MovieCollection('Wes\'s Fav Movies',
+// { name: 'Bee Movie', stars: 10 },
+// { name: 'Star Wars Trek', stars: 1 },
+// { name: 'Virgin Suicides', stars: 7 },
+// { name: 'King of the Road', stars: 8 }
+// );
+
+// movies.add({name:"Titanic",stars: 5});
+
+//GENERATORS
+// function* listPeolpe() {
+//     yield "Wes"
+//     yield "kait"
+//     yield "snickers"
+// }
+
+// const people = listPeolpe()
+ 
+////
+
+// function* listPeolpe() { 
+//     let i = 0;
+// yield i;
+// i++;
+// yield i;
+// i++;
+// yield i
+   
+// }
+
+// const people = listPeolpe()
+ 
+////
+// const inventors = [
+//     { first: 'Albert', last: 'Einstein', year: 1879 },
+//     { first: 'Isaac', last: 'Newton', year: 1643 },
+//     { first: 'Galileo', last: 'Galilei', year: 1564 },
+//     { first: 'Marie', last: 'Curie', year: 1867 },
+//     { first: 'Johannes', last: 'Kepler', year: 1571 },
+//     { first: 'Nicolaus', last: 'Copernicus', year: 1473 },
+//     { first: 'Max', last: 'Planck', year: 1858 },
+//   ];
+
+// function* loop (arr){
+//     for (const item of arr){
+//     yield item;
+//     }
+// }
+
+// const inventorGen = loop(inventors)
+
+//USING GENERATORS FOR AJAX FLOW CONTROL
+// function ajax(url) {
+//     fetch(url).then(data => data.json()).then(data => dataGen.next(data))
+//   }
+
+//   function* steps() {
+//     console.log('fetching beers');
+//     const beers = yield ajax('http://api.react.beer/v2/search?q=hops&type=beer');
+//     console.log(beers);
+
+//     console.log('fetching wes');
+//     const wes = yield ajax('https://api.github.com/users/');
+//     console.log(wes);
+
+//     console.log('fetching fat joe');
+//     const fatJoe = yield ajax('https://api.discogs.com/artists/51988');
+//     console.log(fatJoe);
+//   }
+
+//   const dataGen = steps();
+//   dataGen.next(); // kick it off
+
+//LOOPING GENERATORS WITH FOR OF
+
+
+
+
+
+
+
+

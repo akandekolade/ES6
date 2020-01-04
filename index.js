@@ -1,4 +1,4 @@
-// let and const 
+// let and const
 // {
 //     const name= "kolade"
 //     console.log(name)
@@ -33,14 +33,14 @@
 // const saymyname=(name)=>{
 //     alert(`Hello ${name}!`)
 // }
-// saymyname(`kolade`)  
+// saymyname(`kolade`)
 
 // const race="100m dash"
 // const winners=["kolade","tolu","kunle"]
 // const win= winners.map((winner ,i)=> ({
 //     name: winner,
 //     race,
-//     place: i + 1 
+//     place: i + 1
 // }))
 // console.table(win)
 // console.log(win)
@@ -58,17 +58,17 @@
 // const totalBill = calculateBill(100, undefined, 0.25)
 // console.log(totalBill)
 
-//TEMPLATE STRINGS INTRODUCTION
+// TEMPLATE STRINGS INTRODUCTION
 // const name="jan di";
-// const age = 6 
+// const age = 6
 // const sentence1 = "My dog "+ name + " is "+ age*7 + " years old. "
 // const sentence2 = `My dog ${name} is ${age*7} years old.`
-// console.log(sentence2) 
+// console.log(sentence2)
 
-//CRATING HTML FRAGMENTS WITH TEMPLATE LITERALS
+// CRATING HTML FRAGMENTS WITH TEMPLATE LITERALS
 // It is in a folder
 
-//TAGGED TEMPLATE LITERALS
+// TAGGED TEMPLATE LITERALS
 // function highlights(strings, ...values) {
 //     let str = "";
 //     strings.forEach((string, i) => {
@@ -83,7 +83,7 @@
 
 //  console.log(sentence)
 
-//NEW SRTING METHODS
+// NEW SRTING METHODS
 // const course = "RFB2"
 // const flightnumber = "20-AC2018-jz"
 // const accountnumber = "825242631RT0001"
@@ -127,8 +127,7 @@
 // const team=["kolade", "harry", "sarah", "keegan", "ricker"]
 // const [captain, assistant,...players]= team;
 
-
-//SWAPPING VARIABLES WITH DESTURCTURING
+// SWAPPING VARIABLES WITH DESTURCTURING
 // let inRing = "Hulk Hogan"
 // let onSide = "The Rock"
 // console.log(inRing, onSide);
@@ -136,7 +135,7 @@
 // [inRing, onSide] = [onSide, inRing]
 // console.log(inRing,onSide)
 
-//DESTURCTURING FUNCTIONS
+// DESTURCTURING FUNCTIONS
 // function convertCurrency(amount){
 //     const converted= {
 //         USD: amount*0.76,
@@ -146,24 +145,24 @@
 //     };
 //     return converted
 // }
- 
+
 // const {USD, AUD, MEX,GPB} = convertCurrency(100)
-// console.log(USD,GPB,AUD,MEX) 
+// console.log(USD,GPB,AUD,MEX)
 
 // function tipCalc ({total=100, tip=0.15, tax=0.13} = {})
 // {
 //     return total + (tip*total)+(tax*total);
-   
+
 // }
 // const bill= tipCalc()
 // console.log(bill)
 
 // FOR OF LOOP
-//const cuts =["chuck", "brisket", "shank","short rib"];
+// const cuts =["chuck", "brisket", "shank","short rib"];
 
 // for (const [i, cut] of cuts.entries()) {
 //     console.log(`${cut} is the ${i+1} item`)
-    
+
 // }
 
 // function addUpNumbers(){
@@ -192,14 +191,14 @@
 //     continue;
 //     }
 // })
- 
-//forin loop
+
+// forin loop
 // const cuts =["chuck", "brisket", "shank","short rib"];
 // for(const index in cuts){
 //     console.log(cuts[index]);
 // }
 
-//forof loop
+// forof loop
 // const cuts =["chuck", "brisket", "shank","short rib"];
 // for(const cut of cuts){
 //     if(cut === "brisket"){
@@ -221,9 +220,9 @@
 //     console.log(value, prop)
 // }
 
-//ARRAY.FROM() AND ARRAY.OF()
-// too stressful watch the video again until you know it 
-//or check it in "THE FOLDER"
+// ARRAY.FROM() AND ARRAY.OF()
+// too stressful watch the video again until you know it
+// or check it in "THE FOLDER"
 
 // SPREAD OPERATOR
 
@@ -240,7 +239,7 @@
 //     ingredients: ["Marinara", "Italian Sausage", "Dough", "Cheese"]
 // };
 
-//SPREADING INTO A FUNCTION
+// SPREADING INTO A FUNCTION
 // const inventors= ["Einstein","Tesla","Galileo"]
 // const newInventors =["Musk", "Jobs"]
 // inventors.push(...newInventors)
@@ -251,10 +250,10 @@
 // function sayHi(first, last){
 //     alert(`Hi there ${first} ${last}`)
 // };
- 
+
 // sayHi(...name)
 
-//THE ...REST PARAM IN FUNCTIONS AND DESTRUCTURING
+// THE ...REST PARAM IN FUNCTIONS AND DESTRUCTURING
 // function convertCurrency(rate,...amounts){
 //     return amounts.map(amount => amount*rate);
 
@@ -270,7 +269,7 @@
 // const [captain,assistant,...players]=team;
 // console.log(captain,assistant,players)
 
-//OBJECT LITERAL UPGRADES
+// OBJECT LITERAL UPGRADES
 // const first ="snickers";
 // const last = " bos ";
 // const age = 2;
@@ -310,8 +309,7 @@
 //     },
 // };
 
-
-/////////////////////
+/// //////////////////
 // function invertColor(color) {
 //     return '#' + ("000000" + (0xFFFFFF ^ parseInt(color.substring(1),16)).toString(16)).slice(-6);
 // }
@@ -326,7 +324,6 @@
 
 // console.log(tShirt)
 
-
 // const keys = ['size', 'color', 'weight'];
 // const values = ['medium', 'red', 100];
 
@@ -337,9 +334,9 @@
 // }
 // console.log(shirt);
 
-//PROMISES WATCH THE VIDEO
+// PROMISES WATCH THE VIDEO
 
-//BUILDING YOUR OWN PROMISES
+// BUILDING YOUR OWN PROMISES
 // const p =new Promise((resolve, reject)=> {
 //   setTimeout(()=>{
 //   reject("kolade isn\'t cool");
@@ -353,33 +350,33 @@
 //    console.error(err)
 //  })
 
-//CHAINING PROMISES
+// CHAINING PROMISES
 // watch video
 
-//WORKING WITH MULTIPLE PROMISES
+// WORKING WITH MULTIPLE PROMISES
 
 // const weather = new Promise((resolve) => {
 //       setTimeout(() => {
 //         resolve({ temp: 29, conditions: 'Sunny with Clouds'});
 //       }, 2000);
 //     });
-  
+
 //     const tweets = new Promise((resolve) => {
 //       setTimeout(() => {
 //         resolve(['I like cake', 'BBQ is good too!']);
 //       }, 500);
 //     });
-  
+
 //     Promise
 //       .all([weather, tweets])
 //       .then(responses => {
 //         const [weatherInfo, tweetInfo] = responses;
 //         console.log(weatherInfo, tweetInfo)
 //       });
-  
+
 //       const postsPromise = fetch('http://wesbos.com/wp-json/wp/v2/posts');
 //       const streetCarsPromise = fetch('http://data.ratp.fr/api/datasets/1.0/search/?q=paris');
-    
+
 //       Promise
 //         .all([postsPromise, streetCarsPromise])
 //         .then(responses => {
@@ -389,7 +386,7 @@
 //           console.log(responses);
 //         });
 
-//SYMBOLS
+// SYMBOLS
 // const kolade =Symbol("kolade");
 // const person=Symbol("kolade");
 
@@ -406,7 +403,7 @@
 // const data =syms.map(syn=> classroom[syn]);
 // console.log(data);
 
-//PROTOTYPAL INHERITANCE REVIEW
+// PROTOTYPAL INHERITANCE REVIEW
 // function Dog(name, breed) {
 //     this.name = name;
 //     this.breed = breed;
@@ -423,7 +420,7 @@
 //   const snickers = new Dog('Snickers', 'King Charles');
 //   const sunny = new Dog('Sunny', 'Golden Doodle');
 
-//CLASSES
+// CLASSES
 // class Dog{
 //     constructor(name, breed){
 //         this.name = name;
@@ -437,7 +434,7 @@
 //     }
 //     static info() {
 //         console.log("A dog is better than a cat by 10 times");
-    
+
 //     }
 //     get description() {
 //         return `${this.name} is a ${this.breed} type of dog`;
@@ -453,8 +450,7 @@
 //   const snickers = new Dog('Snickers', 'King Charles');
 //   const sunny = new Dog('Sunny', 'Golden Doodle');
 
-
-//EXTENDING CLASSES AND USING SUPER()
+// EXTENDING CLASSES AND USING SUPER()
 // class Animal {
 //     constructor(name){
 //         this.name = name;
@@ -481,7 +477,7 @@
 // const rhino = new Animal("Rhiny")
 // const snickers = new Dog("snickers","King charles")
 
-//EXTENDING ARRAYS WITH CLASSES FOR CUSTOM COLLECTIONS
+// EXTENDING ARRAYS WITH CLASSES FOR CUSTOM COLLECTIONS
 // class MovieCollection extends Array{
 //     constructor(name, ...items) {
 //         super(...items);
@@ -503,7 +499,7 @@
 
 // movies.add({name:"Titanic",stars: 5});
 
-//GENERATORS
+// GENERATORS
 // function* listPeolpe() {
 //     yield "Wes"
 //     yield "kait"
@@ -511,22 +507,22 @@
 // }
 
 // const people = listPeolpe()
- 
-////
 
-// function* listPeolpe() { 
+/// /
+
+// function* listPeolpe() {
 //     let i = 0;
 // yield i;
 // i++;
 // yield i;
 // i++;
 // yield i
-   
+
 // }
 
 // const people = listPeolpe()
- 
-////
+
+/// /
 // const inventors = [
 //     { first: 'Albert', last: 'Einstein', year: 1879 },
 //     { first: 'Isaac', last: 'Newton', year: 1643 },
@@ -545,7 +541,7 @@
 
 // const inventorGen = loop(inventors)
 
-//USING GENERATORS FOR AJAX FLOW CONTROL
+// USING GENERATORS FOR AJAX FLOW CONTROL
 // function ajax(url) {
 //     fetch(url).then(data => data.json()).then(data => dataGen.next(data))
 //   }
@@ -567,12 +563,139 @@
 //   const dataGen = steps();
 //   dataGen.next(); // kick it off
 
-//LOOPING GENERATORS WITH FOR OF
+// LOOPING GENERATORS WITH FOR OF
+// function * lyrics () {
+//   yield 'But don\'t tell my heart'
+//   yield 'My achy breaky heart'
+//   yield 'I just don\'t think he\'d understand'
+//   yield 'And if you tell my heart'
+//   yield 'My achy breaky heart'
+//   yield 'He might blow up and kill this man'
+// }
+
+// const achy = lyrics()
+
+// for (const line of achy) {
+//   console.log(line)
+// }
+
+// PROXIES
+// const person = { name: 'Kolade', age: 100 }
+// const personProxy = new Proxy(person, {
+//   get (target, name) {
+//     // console.log('someone is asking for ', target, name)
+//     return target[name].toUpperCase()
+//   },
+//   set (target, name, value) {
+//     if (typeof value === 'string') {
+//       target[name] = value.trim().toUpperCase()
+//     }
+//   }
+// })
+// personProxy.name = 'Kolade'
+
+// ANOTHER PROXY EXAMPLE
+// const phoneHandler = {
+//   set (target, name, value) {
+//     target[name] = value.match(/[0-9]/g).join('')
+//   },
+//   get (target, name) {
+//     return target[name].replace(/(\d{3})(\d{3})(\d{4})/, '($1)-$2-$3')
+//   }
+// }
+
+// const phoneNumbers = new Proxy({}, phoneHandler)
+
+// USING PROXIES TO COMAT SILLY ERRORS
+// const safeHandler = {
+//   set (target, name, value) {
+//     const likeKey = Object.keys(target).find(k => k.toLowerCase() === name.toLowerCase())
+//     if (!(name in target) && likeKey) {
+//       throw new Error(`Oops! Looks like we already have a (n)
+//         ${name} property but with the case of ${likeKey}`)
+//     }
+//     target[name] = value
+//   }
+// }
+
+// const safety = new Proxy({ id: 100 }, safeHandler)
+
+// safety.ID = 200
+
+// SETS
+// const people = new Set()
+// people.add('kolade')
+// people.add('tolu')
+// people.add('kunle')
+
+// for (const person of people) {
+//   console.log(person)
+// }
+
+// const students = new Set(['ife', 'kara', 'tony'])
+
+// const dogs = ['snickers', 'sunny']
+// const dogSet = new Set(dogs)
+
+// UNDERSTANDING SETS WITH BRUNCH
+// const brunch = new Set()
+// // as people start coming in
+// brunch.add('wes')
+// brunch.add('sarah')
+// brunch.add('simone')
+// // ready to open
+
+// const line = brunch.values()
+// console.log(line.next().value)
+// console.log(line.next().value)
+// brunch.add('heather')
+// brunch.add('snickers')
+// console.log(line.next().value)
+// console.log(line.next().value)
+// console.log(line.next().value)
+
+// WEAK SETS
+// const dog1 = { name: 'snickers', age: 3 }
+// const dog2 = { name: 'sunny', age: 1 }
+
+// const weakSauce = new WeakSet([dog1, dog2])
+// console.log(weakSauce)
+// dog1 = null
+// console.log(weakSauce)
 
 
+//MAPS
+//  const dogs = new Map();
+
+//  dogs.set("Snickers", 3);
+//  dogs.set("Sunny", 2);
+//  dogs.set("Hugo", 10);
 
 
+//  dogs.forEach((val, key) => console.log(val, key));
+
+//  for (const [key ,val]of dogs) {
+//      console.log(key, val)
+//  }
 
 
+//  MAP METADATA WITH DOM NODE KEYS
+// 
 
 
+// WEAK MAP AND GARBAGE COLLECTION
+ 
+// let dog1 = { name: 'snickers'}
+// let dog2 = { name: 'sunny' }
+ 
+//  const Strong = new Map();
+//  const Weak = new WeakMap();
+
+//  Strong.set(dog1, 'Snickers is the best!')
+// Weak.set(dog2, 'Sunny is the 2nd best') 
+
+// dog1 = null;
+// dog2 = null;
+
+
+//////////////////THE END/////////////////////////////
